@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class BallW3
+public class BallW3 : MonoBehaviour 
 {
     public SpriteRenderer ballRenderer;
     private Rigidbody2D _rigidbody;
@@ -18,7 +18,7 @@ public class BallW3
         //      our _rigidbody object by typing '_rigidbody.linearVelocity'.
         //
         // Uncomment and fix this line to multiply the _rigidbody.linearVelocity
-        //      times the _speedMultiplier variable. 
+        _rigidbody.linearVelocity *= _speedMultiplier;
         //
         // This will make the ball go faster (or slower!) depending on the value
         //      of _speedMultiplier. TUNE that value in the Inspector and see
@@ -50,8 +50,12 @@ public class BallW3
     // Then, IF the average speed is greater than _speedThreshold,
     //      return a value of 1.5,
     //      otherwise, return a value of 1.0. 
+    float GetColorMultiplier(float x, float y) 
+   {    
+        float average = x / 2 + y / 2; }
+    if (average > _speedThreshold) {
+        return 1.5f;}
 
-    //private ??? GetColorMultiplier(??? ???, ??? ???)
     //{
         // write the method body here!
         
