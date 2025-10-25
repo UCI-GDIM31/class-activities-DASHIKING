@@ -13,6 +13,7 @@ Class Just like an architectural design blueprint, it defines the structure, fun
 
 ### W4 
 Table 8. line5 defines a float value called moved_speed and it's value is 1.0f. The code enables the character to move forward and backward along the Z-axis when the W/S keys are pressed, with the speed controlled by _moveSpeed, and the movement is frame rate independent. The character will begin to move in the sprite (0.0) due to line 25.
+I change the cat and the soccer ball object with a rigid body because they need to collide. The Goal object don't has a rigid body but check if trigger. When I test the first time the cat falls underground. I change the clooider size and then fix it.
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
