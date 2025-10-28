@@ -14,6 +14,10 @@ Class Just like an architectural design blueprint, it defines the structure, fun
 ### W4 
 Table 8. line5 defines a float value called moved_speed and it's value is 1.0f. The code enables the character to move forward and backward along the Z-axis when the W/S keys are pressed, with the speed controlled by _moveSpeed, and the movement is frame rate independent. The character will begin to move in the sprite (0.0) due to line 25.
 I change the cat and the soccer ball object with a rigid body because they need to collide. The Goal object don't has a rigid body but check if trigger. When I test the first time the cat falls underground. I change the clooider size and then fix it.
+
+### W5
+"How does the Transform component's forward vector differ from Vector3.forward, and when should I use one over the other in player movement or raycasting?"
+Transform.forward is a dynamic vector that represents the forward direction of a game object in world space, changing as the object rotates—perfect for movement or raycasting based on the object’s orientation. In contrast, Vector3.forward is a constant vector equal to (0, 0, 1), always pointing in the world’s Z-axis direction regardless of rotation.
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
