@@ -19,6 +19,20 @@ I change the cat and the soccer ball object with a rigid body because they need 
 "How does the Transform component's forward vector differ from Vector3.forward, and when should I use one over the other in player movement or raycasting?"
 Transform.forward is a dynamic vector that represents the forward direction of a game object in world space, changing as the object rotates—perfect for movement or raycasting based on the object’s orientation. In contrast, Vector3.forward is a constant vector equal to (0, 0, 1), always pointing in the world’s Z-axis direction regardless of rotation.
 The DeerW5 class needs two member variables: a public Transform targetTransform that can be set in the Inspector to define the GameObject the deer should walk toward, and a private NavMeshAgent agent to control movement. It should use Unity’s Start() method to initialize behavior. In Start(), the class will use GetComponent<NavMeshAgent>() to access the agent on the deer GameObject and then call agent.SetDestination(targetTransform.position) to begin walking toward the target.
+
+### W6
+https://docs.google.com/document/d/1jGkW1Q2xP_713KL3rIzM0yPQ_F7CGMHJ1AHQlTPs5pg/edit?tab=t.0
+I, along with two other classmates, completed the "Other Tools" and "Math" sections.
+Note:
+This class requires two variables. The first one is _speed, which is used to control the speed at which the bat moves.
+* It is a floating-point number (float). The second one is _target, which is used to store the target to be chased,
+* that is, the Transform of the cat. Both of these variables are marked with [SerializeField].
+* This class requires four methods. Two of them are provided by Unity: Start() and Update(). These two methods must be preceded by the "public" keyword so that BatManager can call them. The Start() method disables the script (enabled = false) when the game starts,
+* so that the bat won't chase the player at the beginning. The Update() method checks if the target exists,
+* and then uses Vector3.MoveTowards to make the bat move a little bit towards the target in each frame.
+* The StartChasing() method enables the script (enabled = true), so that Update() starts running,
+* and the bat begins to chase. The StopChasing() method disables the script (enabled = false),
+* so that Update() stops running and the bat stops chasing.
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
