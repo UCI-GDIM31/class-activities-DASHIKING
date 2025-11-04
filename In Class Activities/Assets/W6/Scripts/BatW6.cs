@@ -20,7 +20,7 @@ public class BatW6 : MonoBehaviour
         enabled = true;
     }
 
-    // ????
+    
     public void StopChasing()
     {
         enabled = false;
