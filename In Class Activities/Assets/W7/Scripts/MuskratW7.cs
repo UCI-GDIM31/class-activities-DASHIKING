@@ -88,7 +88,7 @@ public class MuskratW7 : MonoBehaviour
         float leftright = Input.GetAxis("Horizontal");
 
         // STEP 1 -------------------------------------------------------------
-
+        transform.Rotate(Vector3.up * leftright * _rotationSpeed * Time.deltaTime);
 
         // STEP 2 -------------------------------------------------------------
         float movement = Input.GetAxis("Vertical");
@@ -96,7 +96,7 @@ public class MuskratW7 : MonoBehaviour
         // This line of code is incorrect. 
         // Replace it with a different line of code that uses 'movement' to
         //      move the Muskrat forwards and backwards.
-        transform.position += movement * Vector3.forward * _moveSpeed * Time.deltaTime;
+        transform.position += movement * transform.forward * _moveSpeed * Time.deltaTime;
 
         // STEP 2 -------------------------------------------------------------
 
