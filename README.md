@@ -33,6 +33,10 @@ This class requires two variables. The first one is _speed, which is used to con
 * The StartChasing() method enables the script (enabled = true), so that Update() starts running,
 * and the bat begins to chase. The StopChasing() method disables the script (enabled = false),
 * so that Update() stops running and the bat stops chasing.
+
+### W7
+https://docs.google.com/document/d/1Ijdci9okeeCyicXsW5tH1rMqU_g65RI7T5syzvF4jAY/edit?tab=t.0
+Vector3.forward represents the Z-axis direction in world space, not the "forward" direction of Muskrat itself. If Muskrat has been rotated (for example, while walking on a bubble), its "forward" direction may not be the world's Z-axis.
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
